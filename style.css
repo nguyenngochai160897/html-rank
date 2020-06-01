@@ -29,9 +29,6 @@ a:hover{
 .tag-child{
     margin: 20px 0 0 0;
 }
-.tag-child .tag-item{
-    width: 100px;
-}
 .tag-child li:last-child{
     margin-right: 0;
 }
@@ -53,7 +50,6 @@ button.active{
     background: #363B41 !important;
 }
 .jumbotron{
-    background-image: url('./imgs/nguoi-noi-tieng-3.png');
     border-radius: 10px;
     height: 150px;
     padding-top: 25px;
@@ -112,6 +108,7 @@ button.active{
 
 }
 .rank{
+    display: inline-block;
     border: 2px solid #FFFFFF;
     border-radius: 40%;
     font-weight: 500;
