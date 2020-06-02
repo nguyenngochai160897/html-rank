@@ -227,3 +227,105 @@ button.active{
     background: #757678;
 }
 
+/* footer */
+footer{
+    margin-top: 20px;
+    padding: 0 15px;
+}
+footer h3{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+footer .download-app{
+    padding: 20px 0;
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+    
+}
+
+footer .logo{
+    text-align: center;
+    padding-top: 20px;
+    padding-top: 15px;
+}
+footer .logo:before{
+    content: url("imgs/logo.png");
+}
+
+footer .company-info{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #757678;
+}
+
+footer .company-info li{
+    display: inline;
+}
+
+footer .company-info li::after{
+    content: "|";
+    padding: 0 10px;
+    line-height: 17px;
+}
+footer .company-info li:last-child:after{
+    content: "";
+}
+
+footer .company-info a{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #757678;
+    text-decoration: underline;
+}
+footer .company-info a:hover{
+    border: none;
+}
+
+footer .company-info li{
+    outline: none;
+}
+.certificate{
+    margin: 20px 0;
+}
+
+
+/* header */
+header {
+    display: flex;
+    background: #181818;;
+}
+  
+
+header {
+    display: grid;
+    grid-template-columns: 50% auto;
+    margin: 5px 5px 0 5px;
+    align-items: center;
+    justify-items: center;
+}
+header .header-right > *{
+    margin-right: 10px;
+}
+header .header-right > *:last-child{
+    margin-right: 0px;
+}
+header button{
+    background: #FFE300;
+    border-radius: 20px;
+    border: none;
+    outline: none !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #181818;
+    padding: 7px 10px;
+}
+header button:hover{
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   let rankLength = 0;  
-  $("button").click(function () {
+  $(".tag-child button").click(function () {
     let value = $(this).html().trim();
     $(".tag-child button").removeClass("active");
 
