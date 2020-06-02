@@ -44,6 +44,7 @@ a:hover{
     height: 40px;
     border: none;
     padding: 13px 0;
+    outline: none;
 }
 button.active{
     color: #FFFFFF;
