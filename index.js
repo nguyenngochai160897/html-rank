@@ -4,9 +4,12 @@ $(document).ready(function () {
     let value = $(this).html().trim();
     $(".tag-child button").removeClass("active");
 
+    console.log(window.location.pathname);
+    
     //index.html
-    if(window.location.pathname == "/index.html"){
+    if(window.location.pathname.includes("index.html")){
       if(value == "Weekly" ){
+        
         $(this).addClass("active")
         rankLength = 7;
       }
@@ -21,7 +24,7 @@ $(document).ready(function () {
     }
 
     //earnings.html
-    if(window.location.pathname == "/earnings.html"){
+    if(window.location.pathname.includes("earnings.html")){
       if(value == "Hourly" ){
         $(this).addClass("active")
         rankLength = 7;
@@ -37,7 +40,7 @@ $(document).ready(function () {
     }
 
     //donator.html
-    if(window.location.pathname == "/donator.html"){
+    if(window.location.pathname.includes("donator.html")){
       if(value == "Daily" ){
         $(this).addClass("active")
         rankLength = 7;
@@ -63,7 +66,7 @@ function renderRankList(size){
                 '<div class="grid-container">' +
                   '<div class="grid-item-left">' + 
                     '<span class="rank bg-top-' + noClass + '">'+ no +'</span>' + 
-                    '<img src="/imgs/Avatar.png" alt="" class="avatar">' +
+                    '<img src="imgs/Avatar.png" alt="" class="avatar">' +
                     '<span class="streamer-name">VLP Chanh</span>' +
                     '<span class="badge">' + 
                     ' <span class="lv">30</span>' +
