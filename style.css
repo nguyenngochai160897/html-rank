@@ -245,6 +245,13 @@ footer .download-app{
     border-bottom: 1px solid #313131;
     
 }
+footer .download-app div{
+    display: grid;
+    grid-template-columns: minmax(165px, 0) 15px minmax(165px, 0)
+}
+footer .download-app div img{
+    max-width: 100%;
+}
 
 footer .logo{
     text-align: center;
@@ -295,11 +302,6 @@ footer .company-info li{
 
 
 /* header */
-header {
-    display: flex;
-    background: #181818;;
-}
-  
 
 header {
     display: grid;
@@ -307,6 +309,7 @@ header {
     margin: 5px 5px 0 5px;
     align-items: center;
     justify-items: center;
+    background: #181818;;
 }
 header .header-right > *{
     margin-right: 10px;
