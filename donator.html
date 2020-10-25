@@ -2,207 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		pie {
+			width: 5em;
+			height: 5em;
+			display: block;
+			border-radius: 50%;
+			background-color: green;
+			border: 2px solid green;
+			float: left;
+			margin: 1em;
+		}
 
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		.ten {
+			background-image: linear-gradient(126deg, transparent 50%, white 50%), linear-gradient(90deg, white 50%, transparent 50%);
+		}
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		.twentyfive {
+			background-image: linear-gradient(180deg, transparent 50%, white 50%), linear-gradient(90deg, white 50%, transparent 50%);
+		}
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="style.donator.css">
+		.fifty {
+			background-image: linear-gradient(90deg, white 50%, transparent 50%);
+		}
 
-  <script src="index.js"></script>
+
+		/* Slices greater than 50% require first gradient
+   to be transparent -> green */
+
+		.seventyfive {
+			background-image: linear-gradient(180deg, transparent 50%, green 50%), linear-gradient(90deg, white 50%, transparent 50%);
+		}
+
+		.onehundred {
+			background-image: none;
+		}
+		.line-circle{
+			width: 100px;
+			height: 100px;
+			display: block;
+			border-radius: 50%;
+			border: 2px solid black;
+			position: absolute;
+			top: -50px;
+			left: -50px;
+		}
+	</style>
 </head>
 
 <body>
-  <header>
-    <img class="logo" src="imgs/logo-1.png" alt="">
-    <div class="header-right">
-      <button>Nạp +</button>
-      <img src="imgs/fill.png" alt="">
-      <img src="imgs/down.png" alt="">  
-    </div>
-  </header>
-  <div class="container">
-    <ul class="tab row">
-      <li class="tab-item col-4 text-center ">
-        <a class="tab-link" href="index.html">XRank</a>
-      </li>
-      <li class="tab-item col-4  text-center">
-        <a class="tab-link" href="earnings.html">Eanrings</a>
-      </li>
-      <li class="tab-item col-4 text-center">
-        <a class="tab-link active" href="donator.html">Donators</a>
-      </li>
-    </ul>
-    <ul class="tag-child d-flex justify-content-between">
-      <li class="tag-item">
-        <button class="tag-link active">
-          Daily
-        </button>
-      </li>
-      <li class="tag-item">
-        <button class="tag-link">
-          Weekly
-        </button>
-      </li>
-    </ul>
-    <div class="jumbotron mt-4">
-      <div class="main">
-        <div class="crown"></div>
-        <img src="imgs/Avatar.png" alt="" class="avatar">
-        <div class="brand-center-1"></div>
-        <div class="brand-left-1"></div>
-        <div class="brand-right-1"></div>
-      </div>
+	
 
-      <div class="detail">
-        <span class="rank bg-top-1 mr-2">1</span>
-        <span class="streamer-name mr-2">Cao Miho</span>
-        <span class="lv">30</span>
-        <span class="badge">
-          <img src="./imgs/badge.png" alt="">
-          <img src="./imgs/badge.png" alt="">
-        </span>
-        <div class="diamond">200</div>
-      </div>
-    </div>
-
-    <ul class="rank-list mt-5">
-      <li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-2">2</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-3">3</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li><li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-2">2</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li><li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-none">4</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li><li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-none">5</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li><li>
-        <div class="grid-container">
-          <div class="grid-item-left">
-            <span class="rank bg-top-none">6</span>
-            <img src="/imgs/Avatar.png" alt="" class="avatar">
-            <span class="streamer-name">VLP Quyt</span>
-            <span class="badge">
-              <span class="lv">30</span>
-              <img src="./imgs/badge.png" alt="">
-              <img src="./imgs/badge.png" alt="">
-            </span>
-          </div>
-          <div class="grid-item-right">
-            <span>200</span>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-  </div>
-  <footer>
-    <div class="download-app">
-      <h3>Trải nghiệm tốt nhất trên ứng dụng</h3>
-      <div>
-        <img src="imgs/google-play.png" alt="">
-        <img src="imgs/app-store.png" alt="">
-      </div>
-    </div>
-    <div class="logo"></div>
-    <div class="company-info">
-      <p>Cơ quan chủ quản: Công ty Truyền thông Viettel (Viettel Media) – Chi nhánh Tập đoàn Công nghiệp – Viễn thông Quân đội.</p>
-      <p>Chịu trách nhiệm nội dung: Ông Võ Thanh Hải</p> 
-      <p>Trụ sở: Tòa nhà The Light, Đường Tố Hữu, Nam Từ Liêm, Hà Nội</p> 
-      <p>Chăm sóc khách hàng: 198 (Miễn phí)</p> 
-      <p>Giấy phép: Số 365/GP-BTTTT do Bộ Thông tin và Truyền thông cấp ngày 28/07/2017</p>
-      <ul>
-        <li><a href="#">Liên hệ hợp tác</a></li>
-        <li><a href="#">Quy chế hoạt động</a></li>
-        <li><a href="#">Điều khoản sử dụng</a></li>
-        <li><a href="#">Chính sách bảo mật</a></li>
-      </ul>
-    </div>
-    <img src="imgs/certificate.png" alt="" class="certificate">
-  </footer>
+	<div style="position: relative; background-color: red; width: 500px; height: 200px; overflow: hidden;">
+		<div class="line-circle"></div>
+	</div>
 </body>
 
 </html>
